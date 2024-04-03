@@ -1,0 +1,35 @@
+1_april:
+    ClaiDeck:
+        - Explored the ClaimMatterInformation Viewset to understand its functionalities and endpoints.
+        - Discovered that the "/ClaimMatterInformation/{matter_id}/Documents/delete_permanently" endpoint is not utilized.
+        - Resolved pre-commit issues in Python to ensure code quality and consistency.
+        - Implemented parameters for uploading files in the Swagger UI to enhance usability and documentation.
+
+2_april:
+    ClaimDeck: 
+        - setup budget_type field in create budget(made it required)
+        - completed the ClaimMatterInformation
+        - completed Organization
+        - completed QuickLinks
+        - completed claimscore
+        - not taking any input in post method in swagger : /budget-type-and-code
+        - /dynamicpage/{page_slug} what to pass in page_slug
+    Data_Practices:
+        Introduction to Pandas:
+            - Powerful Python library for data manipulation and analysis.
+            - Designed for working with relational or labeled data.
+
+        Data Structures:
+            - Primary structures: Series (1D) and DataFrame (2D).
+            - Series represents a column or row, while DataFrame is tabular.
+
+        Data Handling:
+            - Pandas handles various data types: numeric, categorical, etc.
+            - Data manipulation mainly done with DataFrames and Series.
+
+        Working with Data:
+            - Apply operations to DataFrames or Series with Pandas' methods.
+
+        Reading and Writing Data:
+            - Use `.read_csv()` and `.to_excel()` for reading/writing tabular data.
+            - E.g., `.to_excel()` converts DataFrame to Excel sheet.
