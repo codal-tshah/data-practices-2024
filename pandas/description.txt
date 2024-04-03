@@ -1,0 +1,14 @@
+- Pandas is a powerful library in Python for data manipulation and analysis
+- expressive data structures designed to make working with “relational” or “labeled” data 
+-  pandas is built on top of NumPy 
+- The two primary data structures of pandas, Series (1-dimensional) and DataFrame (2-dimensional)
+
+tutorial: 
+what kind of data pandas handle?
+    Import the package, aka import pandas as pd
+    A table of data is stored as a pandas DataFrame
+    Each column in a DataFrame is a Series
+    You can do things by applying a method to a DataFrame or Series
+
+How do I read and write tabular data?
+- To convert csv to excel sheet use .to_excel()
