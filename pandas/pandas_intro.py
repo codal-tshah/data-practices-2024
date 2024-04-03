@@ -2,14 +2,14 @@ import pandas as pd
 
 df = pd.DataFrame(
     {
-        "Name":[
+        "Name": [
             "Rahul",
             "Anil",
             "Mahesh",
             "Ravi",
         ],
-        "College":["uvpce","skpcer","bsp", "vpce"],
-        "Age":[18, 19, 21, 20]
+        "College": ["uvpce", "skpcer", "bsp", "vpce"],
+        "Age": [18, 19, 21, 20],
     }
 )
 
@@ -37,7 +37,7 @@ dt.tail(8)
 
 dt.dtypes
 
-dt.to_excel("new.xlsx", sheet_name="titanic_spreadsheet",index=False)
+dt.to_excel("new.xlsx", sheet_name="titanic_spreadsheet", index=False)
 
 excel = pd.read_excel("titanic.xlsx")
 excel
