@@ -33,3 +33,17 @@
         Reading and Writing Data:
             - Use `.read_csv()` and `.to_excel()` for reading/writing tabular data.
             - E.g., `.to_excel()` converts DataFrame to Excel sheet.
+
+3_apr:
+    ClaimDeck:
+        Explored Liens ViewSet
+        Explored Task ViewSet
+        Explored Export ViewSet
+        Explored Notification ViewSet
+        Explored DynamicPage ViewSet
+        Explored Budget-Type-and-Code ViewSet
+            - Made code changes for POST method
+    Data_Practices:
+        - Made a .py file from .ipynb file
+        - Setup the pre-commit
+        - setup the .ipynb_checkpoints for jupyter notebook
