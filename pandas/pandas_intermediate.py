@@ -53,3 +53,29 @@ fig.savefig(
     "concentrations.png"
 )  # Save the Figure/Axes using the existing Matplotlib method.
 plt.show()  # Display the plot
+
+"""# **create new columns derived from existing columns**"""
+
+data
+
+data["london_mg_per_cubic"] = data["station_london"] * 1.882
+data
+
+"""**Ratio Paris versus Antwerp**"""
+
+data["Paris_ratio"] = data["station_paris"] / data["station_antwerp"]
+data
+
+columns_renamed = data.rename(
+    columns={
+        "station_antwerp": "Antwerp",
+        "station_london": "London",
+        "station_paris": "Paris",
+    }
+)
+columns_renamed.head()
+
+"""**converting the column names to lowercase letters can be done using a function**"""
+
+columns_renamed = columns_renamed.rename(columns=str.lower)
+columns_renamed.head()
