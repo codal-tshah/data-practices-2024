@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1fvheiggiT7IGV1M99yjJBXNSNixpdeWq
 """
 
-from google.colab import drive  # type: ignore
+from google.colab import drive
 
 drive.mount("/content/drive")
 
@@ -184,3 +184,48 @@ no_2 = no2_pivoted.melt(
     var_name="id_location",
 )
 no_2
+
+"""# **combine data from multiple tables**"""
+
+import pandas as pd
+
+air_quality_no2 = pd.read_csv(
+    "/content/drive/MyDrive/data_practices/pandas/data/air_quality_no2_long.csv",
+    parse_dates=True,
+)
+air_quality_no2 = air_quality_no2[["date.utc", "location", "parameter", "value"]]
+air_quality_no2.head()
+
+air_quality_pm25 = pd.read_csv(
+    "/content/drive/MyDrive/data_practices/pandas/data/air_quality_pm25_long.csv",
+    parse_dates=True,
+)
+air_quality_pm25 = air_quality_pm25[["date.utc", "location", "parameter", "value"]]
+air_quality_pm25.head()
+
+"""**The concat() function performs concatenation operations of multiple tables along one of the axes (row-wise or column-wise)**"""
+
+air_quality = pd.concat([air_quality_pm25, air_quality_no2], axis=0)
+air_quality
+
+print("Shape of the ``air_quality_pm25`` table: ", air_quality_pm25.shape)
+
+print("Shape of the ``air_quality_no2`` table: ", air_quality_no2.shape)
+
+print("Shape of the resulting ``air_quality`` table: ", air_quality.shape)
+
+air_quality = air_quality.sort_values("date.utc")
+air_quality
+
+air_quality.reset_index(level=0)
+
+air_quality_ = pd.concat([air_quality_pm25, air_quality_no2], keys=["PM25", "NO2"])
+air_quality_
+
+merged_data = pd.merge(
+    air_quality_no2,
+    air_quality_pm25,
+    left_on=["location", "parameter"],
+    right_on=["location", "parameter"],
+)
+merged_data

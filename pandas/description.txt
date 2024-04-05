@@ -33,3 +33,6 @@
         - Sorting by one or more columns is supported by sort_values.
         - The pivot function is purely restructuring of the data, pivot_table supports aggregations.
         - The reverse of pivot (long to wide format) is melt (wide to long format).
+    - combine data from multiple tables
+        - Multiple tables can be concatenated both column-wise and row-wise using the concat function.
+        - For database-like merging/joining of tables, use the merge function.
