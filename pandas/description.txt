@@ -36,3 +36,13 @@
     - combine data from multiple tables
         - Multiple tables can be concatenated both column-wise and row-wise using the concat function.
         - For database-like merging/joining of tables, use the merge function.
+8_apr:
+    - Handle time series data
+        - Valid date strings can be converted to datetime objects using to_datetime function or as part of read functions.
+        - Datetime objects in pandas support calculations, logical operations and convenient date-related properties using the dt accessor.
+        - A DatetimeIndex contains these date-related properties and supports convenient slicing.
+        - Resample is a powerful method to change the frequency of a time series.
+    - Manipulate textual data
+        - String methods are available using the str accessor.
+        - String methods work element-wise and can be used for conditional indexing.
+        - The replace method is a convenient method to convert values according to a given dictionary.
