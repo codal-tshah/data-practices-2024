@@ -16,3 +16,12 @@
     Data_Practices:
         - Learning of Pandas comparission with SQL tools
             - Learned upto right join
+
+10_apr:
+    - ClaiDeck:
+        - Solved the Issue of CSS and page-break line in frontend
+        - Face an issue in unicode while extracting the PDF
+    - Data_Practices:
+        - completed Pandas comparision with SQL
+        - completed Pandas comparision with Spreadsheets
+        - completed Pandas Tutoials of getting started 
