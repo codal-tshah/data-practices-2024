@@ -1,4 +1,4 @@
-6_apr:
+8_apr:
     ClaiDeck:
     - Celery Setup:
         - Resolved to get the Sucssed from celery task execution in claimscore
@@ -7,3 +7,12 @@
     Data_Practices:
         - Handle time series data
         - Manipulate textual data
+
+9_apr:
+    ClaiDeck:
+        - Fixing the issue of exporting messages in PDF (line breaking in long paragraph)
+        - Changes in Pytest and resolved the failed test cases 
+            - test_views.py 
+    Data_Practices:
+        - Learning of Pandas comparission with SQL tools
+            - Learned upto right join
