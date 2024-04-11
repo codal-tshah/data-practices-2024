@@ -1,0 +1,10 @@
+1. Explored ClaimMatterInformation Viewset.
+2. Resolved pre-commit issues for code quality.
+3. Implemented file upload parameters in Swagger UI.
+4. Completed ClaimMatterInformation, Organization, QuickLinks, and ClaimScore in ClaimDeck.
+5. Learned about Pandas and its functionalities in Data_Practices.
+6. Explored Liens, Task, Export, Notification, DynamicPage, and Budget-Type-and-Code ViewSets.
+7. Set up Celery for asynchronous task processing.
+8. Learned about selecting a subset of a DataFrame and creating plots in Pandas.
+9. Started learning Pytest.
+10. Learned about calculating summary statistics and reshaping table layouts.
