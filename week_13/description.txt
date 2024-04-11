@@ -59,3 +59,11 @@
         - select a subset of a DataFrame
         - create plots in pandas
         - create new columns derived from existing columns
+
+5_apr:
+    ClaiDeck:
+        - Started Learning of Pytest
+    Data_Practices:
+        - Calculate summary statistics
+        - Reshape the layout of tables
+        - Combine data from multiple tables

@@ -23,3 +23,16 @@
     - select a subset of a DataFrame
     - create plots in pandas
     - create new columns derived from existing columns
+
+5_apr:
+    - calculate summary statistics
+        - Aggregation statistics can be calculated on entire columns or rows.
+        - groupby provides the power of the split-apply-combine pattern.
+        - value_counts is a convenient shortcut to count the number of entries in each category of a variable.
+    - reshape the layout of tables
+        - Sorting by one or more columns is supported by sort_values.
+        - The pivot function is purely restructuring of the data, pivot_table supports aggregations.
+        - The reverse of pivot (long to wide format) is melt (wide to long format).
+    - combine data from multiple tables
+        - Multiple tables can be concatenated both column-wise and row-wise using the concat function.
+        - For database-like merging/joining of tables, use the merge function.
