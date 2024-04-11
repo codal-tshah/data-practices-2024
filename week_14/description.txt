@@ -1,0 +1,9 @@
+6_apr:
+    ClaiDeck:
+    - Celery Setup:
+        - Resolved to get the Sucssed from celery task execution in claimscore
+        - Resolved the Conflicts of PDF Export
+        - Resolved the Conflicts of CSV Export
+    Data_Practices:
+        - Handle time series data
+        - Manipulate textual data

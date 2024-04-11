@@ -229,3 +229,151 @@ merged_data = pd.merge(
     right_on=["location", "parameter"],
 )
 merged_data
+
+"""# **Handle time series data**"""
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+air_quality = pd.read_csv(
+    "/content/drive/MyDrive/data_practices/pandas/data/air_quality_no2_long.csv"
+)
+air_quality = air_quality.rename(columns={"date.utc": "datetime"})
+air_quality.head()
+
+"""**.unique() is use to showcase number of unique items present in the column**"""
+
+print("locations: ", air_quality.location.unique())
+print("cities: ", air_quality.city.unique())
+
+"""**By applying the to_datetime function, pandas interprets the strings and convert these to datetime (i.e. datetime64[ns, UTC]) objects**"""
+
+air_quality["datetime"] = pd.to_datetime(air_quality["datetime"])
+air_quality["datetime"]
+
+"""*2nd approach to convert dates:
+
+```
+# pd.read_csv("air_quality_no2_long.csv", parse_dates=["datetime"])
+```
+
+**start and end date of data**
+"""
+
+air_quality["datetime"].min(), air_quality["datetime"].max()
+
+"""**Using pandas.Timestamp for datetimes enables us to calculate with date information and make them comparable**"""
+
+air_quality["datetime"].max() - air_quality["datetime"].min()
+
+air_quality["month"] = air_quality["datetime"].dt.month
+air_quality.head()
+
+air_quality.groupby([air_quality["datetime"].dt.weekday, "location"])["value"].mean()
+
+air_quality["datetime"].dt.weekday
+air_quality
+
+fig, axs = plt.subplots(figsize=(11, 4))
+air_quality.groupby(air_quality["datetime"].dt.hour)["value"].mean().plot(
+    kind="bar", rot=0, ax=axs
+)
+plt.xlabel("Hour of the day")  # custom x label using Matplotlib
+plt.ylabel("$NO_2 (µg/m^3)$")
+
+"""**Datetime as index**"""
+
+no_2 = air_quality.pivot(index="datetime", columns="location", values="value")
+no_2.head()
+
+no_2.index.year, no_2.index.weekday
+
+no_2["2019-05-20":"2019-05-21"].plot()
+
+"""**Aggregate the current hourly time series values to the weekly maximum value in each of the stations**"""
+
+weekly_max = no_2.resample("W").max()
+weekly_max
+
+"""*The resample() method is similar to a groupby operation:
+
+it provides a time-based grouping, by using a string (e.g. M, 5H,…) that defines the target frequency
+
+it requires an aggregation function such as mean, max*
+"""
+
+monthly_mean = no_2.resample("M").mean()
+monthly_mean
+
+"""**The frequency of the time series is provided by the freq attribute:**"""
+
+weekly_max.index.freq
+
+monthly_mean.index.freq
+
+"""**Make a plot of the daily mean NO2 value in each of the station**"""
+
+no_2.resample("D").mean().plot(style="-o", figsize=(11, 5))
+
+"""**plotted max value per day**"""
+
+no_2.resample("D").max().plot(style="-^", figsize=(11, 5))
+
+no_2.resample("W").max().plot(style="-^", figsize=(11, 5))
+
+"""# **Manipulate textual data**"""
+
+import pandas as pd
+
+titanic = pd.read_csv("/content/drive/MyDrive/data_practices/pandas/data/titanic.csv")
+titanic.head()
+
+"""**Make all name characters lowercase.**
+
+**add the str accessor **
+"""
+
+titanic["Name"].str.lower()
+
+titanic["Name"].str.upper()
+
+titanic["Surname"] = titanic["Name"].str.split(",")
+titanic.head()
+
+titanic["Surname"]
+
+"""** Series.str.get() to extract the relevant part**"""
+
+titanic["Surname"] = titanic["Name"].str.split(",").str.get(0)
+titanic.head()
+
+"""**Series.str.contains() checks for each of the values in the column Name if the string contains the word Countess and returns for each of the values True**"""
+
+titanic[titanic["Name"].str.contains("Countess")]
+
+titanic[titanic["Name"].str.contains("Mrs")]
+
+titanic["Surname"].value_counts()
+
+titanic[titanic["Surname"].str.contains("Andersson")]
+
+"""**passenger of the Titanic has the longest name?**
+
+The idxmax() method does exactly that. It is not a string method and is applied to integers
+"""
+
+print("id:", titanic["Name"].str.len().idxmax())
+print("max len:", titanic["Name"].str.len().max())
+print("name:", titanic.loc[307, "Name"])
+
+titanic.loc[307, "Name"]
+
+passenger_308_name = titanic.loc[titanic["PassengerId"] == 308, "Name"].values[0]
+passenger_308_name
+
+titanic.loc[titanic["Name"].str.len().idxmax(), "Name"]
+
+titanic["Sex_shorts"] = titanic["Sex"].replace({"male": "M", "female": "F"})
+titanic.head()
+
+titanic["Sex"].str.replace("female", "F")
