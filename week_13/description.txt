@@ -47,3 +47,15 @@
         - Made a .py file from .ipynb file
         - Setup the pre-commit
         - setup the .ipynb_checkpoints for jupyter notebook
+
+4_apr:
+    ClaiDeck:
+        - celery setup:
+            - celery --app claimdeck.celery_app:app worker --loglevel=info
+            - pip install flower
+            - celery --app claimdeck.celery_app:app flower --port=5566
+            - celery --app claimdeck.celery_app:app worker --loglevel=info --pool=solo
+    Data_Practices:
+        - select a subset of a DataFrame
+        - create plots in pandas
+        - create new columns derived from existing columns
