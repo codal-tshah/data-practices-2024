@@ -32,3 +32,5 @@
         - Initiated learning journey on basic Pytest fundamentals and its functionality.
         - Successfully rectified one test case.
         - Encountered an error in one test case, involving a dictionary key value issue.
+    - Data_Practices:
+        - PySpark Introduction
