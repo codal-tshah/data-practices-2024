@@ -3,3 +3,11 @@
     - PySpark is a Python API to support Python with Apache Spark
     - PySpark provides Py4j library
     - Spark is an open-source, cluster computing system which is used for big data solution
+
+12_apr: 
+- PySpark 
+  - Configured PySpark environment.
+  - Utilized SparkConf for application configuration.
+  - Encountered connectivity issues with Google Colab and local runtime.
+  - Configured Jupyter Notebook for PySpark.
+  - Commenced learning PySpark fundamentals and covered introductory concepts. 
