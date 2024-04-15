@@ -151,3 +151,30 @@ wd.show()
 
 wd.write.json("/content/drive/MyDrive/data_practices/pyspark/data/js", mode="overwrite")
 wd.show()
+
+"""# **Reading of Parquet file**"""
+
+help(spark.read.parquet)
+
+dt = spark.read.parquet(
+    "/content/drive/MyDrive/data_practices/pyspark/data/sample1.parquet"
+)
+dt.show()
+
+display(dt.count())
+
+data = [(1, "milan", 56), (2, "rahul", 26), (3, "mihir", 34), (4, "jay", 21)]
+schema = ["id", "name", "age"]
+df = spark.createDataFrame(data=data, schema=schema)
+df.show()
+
+df.write.parquet(
+    "/content/drive/MyDrive/data_practices/pyspark/data/parquet_output.parquet",
+    mode="overwrite",
+)
+
+p1 = spark.read.parquet(
+    "/content/drive/MyDrive/data_practices/pyspark/data/parquet_output.parquet",
+    mode="append",
+)
+p1.show()
