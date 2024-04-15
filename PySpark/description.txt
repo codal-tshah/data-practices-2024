@@ -10,4 +10,14 @@
   - Utilized SparkConf for application configuration.
   - Encountered connectivity issues with Google Colab and local runtime.
   - Configured Jupyter Notebook for PySpark.
-  - Commenced learning PySpark fundamentals and covered introductory concepts. 
+  - Commenced learning PySpark fundamentals and covered introductory concepts.
+
+15_apr:
+- PySpark:
+  - SparkContext :is the entry point for interacting with Spark    functionality.
+    It represents the connection to a Spark cluster, and it's responsible for coordinating the execution of Spark jobs.
+  - SparkSession is the entry point for working with structured data in Spark
+    It provides a unified interface for interacting with Spark, including SQL, DataFrames, Datasets, and other Spark APIs.
+  - reading of csv ad json files 
+  - Read multiple json files from folder
+
