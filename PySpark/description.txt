@@ -14,10 +14,19 @@
 
 15_apr:
 - PySpark:
-  - SparkContext :is the entry point for interacting with Spark    functionality.
+  - SparkContext :is the entry point for interacting with Spark functionality.
     It represents the connection to a Spark cluster, and it's responsible for coordinating the execution of Spark jobs.
   - SparkSession is the entry point for working with structured data in Spark
     It provides a unified interface for interacting with Spark, including SQL, DataFrames, Datasets, and other Spark APIs.
-  - reading of csv ad json files 
+  - reading of csv and json files 
+  - Read CSV file in to Dataframe using PySpark
+  - Write DataFrame into CSV file using PySpark
+  - Read json file into DataFrame using Pyspark 
+  - Write DataFrame into json file using PySpark 
   - Read multiple json files from folder
+  - Read Parquet file into Dataframe using PySpark 
+  - Write DataFrame into parquet file using PySpark 
+  - show() in Pyspark to display Dataframe contents 
+  - withColumn() in PySpark I Add new column or Change existing column data or type in DataFrame
+  - withColumnRenamed() usage in PySpark
 

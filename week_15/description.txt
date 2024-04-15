@@ -1,0 +1,9 @@
+15_apr: 
+    - PySpark
+        - SparkContext: Entry point for interacting with Spark functionality, connecting to a Spark cluster, and coordinating job execution.
+        - SparkSession: Entry point for working with structured data, providing a unified interface for SQL, DataFrames, Datasets, and other Spark APIs.
+        - Reading and Writing CSV Files: Utilizing PySpark to read and write CSV files into DataFrames.
+        - Reading and Writing JSON Files: Employing PySpark to read and write JSON files into DataFrames.
+        - Reading Multiple JSON Files: Handling the reading of multiple JSON files from a folder using PySpark.
+        - Reading and Writing Parquet Files: Using PySpark to read Parquet files into DataFrames and write DataFrames into Parquet files.
+        - DataFrame Operations: Demonstrating DataFrame operations such as displaying DataFrame contents with `show()`, adding or changing columns with `withColumn()`, and renaming columns with `withColumnRenamed()` in PySpark.
