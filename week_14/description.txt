@@ -34,3 +34,11 @@
         - Encountered an error in one test case, involving a dictionary key value issue.
     - Data_Practices:
         - PySpark Introduction
+
+12_apr:
+    - PySpark 
+        - Configured PySpark environment.
+        - Utilized SparkConf for application configuration.
+        - Encountered connectivity issues with Google Colab and local runtime.
+        - Configured Jupyter Notebook for PySpark.
+        - Commenced learning PySpark fundamentals and covered introductory concepts.

@@ -1,0 +1,31 @@
+8_apr:
+- ClaiDeck:
+  - Solved Celery setup issues.
+  - Explored time series data handling and textual data manipulation.
+- Data_Practices:
+  - Handled time series data.
+  - Manipulated textual data.
+
+9_apr:
+- ClaiDeck:
+  - Resolved PDF export and Pytest issues.
+- Data_Practices:
+  - Explored Pandas vs. SQL comparisons.
+
+10_apr:
+- ClaiDeck:
+  - Addressed CSS and PDF extraction problems.
+- Data_Practices:
+  - Completed Pandas tutorials and comparisons.
+
+11_apr:
+- ClaiDeck:
+  - Worked on PDF export and began learning Pytest.
+- Data_Practices:
+  - Started learning PySpark fundamentals.
+
+12_apr:
+- Data_Practices:
+  - Started learning PySpark basics.
+  - PySpark:
+    - Set up PySpark and encountered Google Colab issues.
