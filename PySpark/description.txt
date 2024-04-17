@@ -30,3 +30,12 @@
   - withColumn() in PySpark I Add new column or Change existing column data or type in DataFrame
   - withColumnRenamed() usage in PySpark
 
+16_apr:
+- Pyspark:
+  - StructType – Defines the structure of the DataFrame
+  - StructField – Defines the metadata of the DataFrame column
+  - PySpark ArrayType():
+    - Use explode() function to create a new row for each element in the given array column
+    - split() sql function returns an array type after splitting the string column by delimiter. 
+    - Use array() function to create a new array column by merging the data from multiple columns. All input columns must have the same data type.
+    - array_contains() sql function is used to check if array column contains a value. Returns null if the array is null, true if the array contains the value, and false otherwise.

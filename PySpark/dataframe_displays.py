@@ -21,7 +21,7 @@ help(DataFrame.write)
 from pyspark.context import SparkContext
 from pyspark.sql.session import SparkSession
 
-sc = SparkContext("local")
+sc = SparkContext.getOrCreate()
 spark = SparkSession(sc)
 
 data = [
@@ -69,3 +69,231 @@ df3.show()
 
 df4 = df3.withColumnRenamed("age", "persons_age")
 df4.show()
+
+"""# **StructType() & StructField()**"""
+
+from pyspark.sql.types import *
+
+d = [(1, "lqwgdlyqwgdlgqlgd"), (2, "lqwugdqydqwlyd")]
+d2 = spark.createDataFrame(d)
+d2.show()
+print(d2.describe())
+
+d = [(1, "mihit", "lqwgdlyqwgdlgqlgd"), (2, "hiren", "lqwugdqydqwlyd")]
+schema = StructType(
+    [
+        StructField(name="id", dataType=IntegerType()),
+        StructField(name="name", dataType=StringType()),
+        StructField(name="description", dataType=StringType()),
+    ]
+)
+d2 = spark.createDataFrame(d, schema)
+d2.show()
+d2.printSchema()
+
+d = [
+    (1, ("mihit", "vyas"), "lqwgdlyjbdwekubdqwgdlgqlgd"),
+    (2, ("hiren", "patel"), "lqwluagiugaeeweweugdqydqwlyd"),
+]
+structName = StructType(
+    [StructField("firstName", StringType()), StructField("lastName", StringType())]
+)
+schema = StructType(
+    [
+        StructField(name="id", dataType=IntegerType()),
+        StructField(name="name", dataType=structName),
+        StructField(name="description", dataType=StringType()),
+    ]
+)
+d2 = spark.createDataFrame(d, schema)
+d2.show()
+d2.printSchema()
+display(d2)
+
+import pandas as pd
+
+# Your existing code
+d = [
+    (52, ("mihit", "vyas"), "lqwgdlyjbdwekubdqwgdlgqlgd"),
+    (14, ("hiren", "patel"), "lqwluagiugaeeweweugdqydqwlyd"),
+]
+
+# Define the schema
+structName = StructType(
+    [StructField("firstName", StringType()), StructField("lastName", StringType())]
+)
+schema = StructType(
+    [
+        StructField(name="age", dataType=IntegerType()),
+        StructField(name="name", dataType=structName),
+        StructField(name="description", dataType=StringType()),
+    ]
+)
+
+# Create the DataFrame
+d2 = spark.createDataFrame(d, schema)
+
+# Convert DataFrame to Pandas DataFrame
+df_pd = d2.toPandas()
+
+# Display the Pandas DataFrame
+display(df_pd)
+
+from pyspark.sql.types import StructType, StructField, IntegerType, StringType
+
+# Define the data
+data = [
+    (
+        45,
+        ("John", "Doe"),
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula tortor id augue accumsan, in consequat nisi gravida.",
+    ),
+    (
+        41,
+        ("Jane", "Smith"),
+        "Nullam convallis libero non eros volutpat malesuada. Morbi ut sapien nec felis pulvinar ultricies.",
+    ),
+    (
+        12,
+        ("Alice", "Johnson"),
+        "Vivamus venenatis, lacus ut accumsan sagittis, justo quam pretium turpis, eget elementum metus nulla eget ipsum.",
+    ),
+    (
+        20,
+        ("Bob", "Brown"),
+        "Phasellus porttitor felis non nunc pharetra, vel mattis elit vehicula.",
+    ),
+    (
+        30,
+        ("Emily", "Davis"),
+        "Donec quis tortor nec elit varius pharetra. Vivamus auctor orci at eros malesuada rutrum.",
+    ),
+    (
+        30,
+        ("Michael", "Wilson"),
+        "Fusce sit amet nisi sit amet eros consectetur auctor in nec nulla.",
+    ),
+]
+
+# Define the schema for the nested structure
+structName = StructType(
+    [StructField("firstName", StringType()), StructField("lastName", StringType())]
+)
+
+# Define the schema for the DataFrame
+schema = StructType(
+    [
+        StructField("age", IntegerType()),
+        StructField("name", structName),
+        StructField("description", StringType()),
+    ]
+)
+
+# d2.show()
+
+# # Create the DataFrame
+d2 = spark.createDataFrame(data, schema)
+
+# # Show the DataFrame
+d2.show(truncate=False)
+df_pd = d2.toPandas()
+
+# Display the Pandas DataFrame
+display(df_pd)
+
+from pyspark.sql.functions import *
+
+d2.show()
+
+data = [
+    (1, ("lwfuweblf", "jfweulf"), 56),
+    (2, ("lwb", "jrb"), 26),
+    (3, ("eedew", "ww"), 34),
+    (4, ("wleu", "wliugf"), 21),
+]
+schema = ["id", "name", "age"]
+df = spark.createDataFrame(data=data, schema=schema)
+df.show()
+
+"""# **Create PySpark ArrayType Column Using StructType**"""
+
+from pyspark.sql.types import StringType, ArrayType
+
+arrayCol = ArrayType(StringType(), False)
+
+data = [
+    ("James,,Smith", ["Java", "Scala", "C++"], ["Spark", "Java"], "OH", "CA"),
+    ("Michael,Rose,", ["Spark", "Java", "C++"], ["Spark", "Java"], "NY", "NJ"),
+    ("Robert,,Williams", ["CSharp", "VB"], ["Spark", "Python"], "UT", "NV"),
+]
+
+from pyspark.sql.types import StringType, ArrayType, StructType, StructField
+
+schema = StructType(
+    [
+        StructField("name", StringType(), True),
+        StructField("languagesAtSchool", ArrayType(StringType()), True),
+        StructField("languagesAtWork", ArrayType(StringType()), True),
+        StructField("currentState", StringType(), True),
+        StructField("previousState", StringType(), True),
+    ]
+)
+
+df = spark.createDataFrame(data=data, schema=schema)
+df.printSchema()
+df.show()
+
+"""explode()"""
+
+from pyspark.sql.functions import explode, col, array
+
+# Define the data
+data = [
+    (1, ("lwfuweblf", "jfweulf"), 56),
+    (2, ("lwb", "jrb"), 26),
+    (3, ("eedew", "ww"), 34),
+    (4, ("wleu", "wliugf"), 21),
+]
+
+# Define the schema
+schema = ["id", "name", "age"]
+
+# Create the DataFrame
+df = spark.createDataFrame(data=data, schema=schema)
+
+# Convert the 'name' column to an array
+df2 = df.withColumn("name_array", array("name._1", "name._2"))
+
+# Explode the 'name_array' column
+df3 = df2.withColumn("names", explode(col("name_array")))
+
+df3 = df3.drop("name_array")
+
+# Show the DataFrame
+df3.show(truncate=False)
+
+df.select(df.name, explode(df.languagesAtSchool).alias("lang_list")).show()
+
+df.select(df.name, explode(df.languagesAtSchool)).show()
+
+"""Split()"""
+
+df.select(split(df.name, ",").alias("nameAsArray")).show()
+
+df.select(df.name, split(df.name, ",").alias("new_split")).show()
+
+df.show()
+
+df.select(df.name, array(df.currentState, df.previousState).alias("States")).show()
+
+"""array_contains()"""
+
+df.select(
+    df.name, array_contains(df.languagesAtSchool, "Java").alias("array_contains")
+).show()
+
+df.select(
+    df.name,
+    explode(df.languagesAtSchool).alias("lang_list"),
+    split(df.name, ",").alias("new_split"),
+).show()
