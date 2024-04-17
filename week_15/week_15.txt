@@ -1,0 +1,7 @@
+15_apr:
+- PySpark:
+  - SparkContext and SparkSession: Key entry points for Spark functionality
+  - Reading and Writing CSV Files: Utilization of PySpark for CSV file operations
+  - Reading and Writing JSON Files: Employing PySpark for JSON file handling
+  - Reading Multiple JSON Files: Managing multiple JSON files with PySpark
+  - DataFrame Operations: Demonstrating DataFrame operations in PySpark
