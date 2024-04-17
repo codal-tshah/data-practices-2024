@@ -39,3 +39,8 @@
     - split() sql function returns an array type after splitting the string column by delimiter. 
     - Use array() function to create a new array column by merging the data from multiple columns. All input columns must have the same data type.
     - array_contains() sql function is used to check if array column contains a value. Returns null if the array is null, true if the array contains the value, and false otherwise.
+
+17_apr:
+- local – which is not really a cluster manager but still I wanted to mention that we use “local” for master() in order to run Spark on your laptop/computer.
+- PySpark When Otherwise – when() is a SQL function that returns a Column type and otherwise() is a function of Column, if otherwise() is not used, it returns a None/NULL value.
+- PySpark SQL Case When – This is similar to SQL expression, Usage: CASE WHEN cond1 THEN result WHEN cond2 THEN result... ELSE result END.
