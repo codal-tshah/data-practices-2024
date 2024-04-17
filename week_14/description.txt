@@ -25,3 +25,12 @@
         - completed Pandas comparision with SQL
         - completed Pandas comparision with Spreadsheets
         - completed Pandas Tutoials of getting started 
+
+11_apr:
+    - ClaiDeck:
+        - Attempted to resolve PDF export issue related to unicode encoding.
+        - Initiated learning journey on basic Pytest fundamentals and its functionality.
+        - Successfully rectified one test case.
+        - Encountered an error in one test case, involving a dictionary key value issue.
+    - Data_Practices:
+        - PySpark Introduction

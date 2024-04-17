@@ -1,0 +1,5 @@
+11_apr:
+    pyspark Intro:
+    - PySpark is a Python API to support Python with Apache Spark
+    - PySpark provides Py4j library
+    - Spark is an open-source, cluster computing system which is used for big data solution
