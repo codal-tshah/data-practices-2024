@@ -44,3 +44,5 @@
 - local – which is not really a cluster manager but still I wanted to mention that we use “local” for master() in order to run Spark on your laptop/computer.
 - PySpark When Otherwise – when() is a SQL function that returns a Column type and otherwise() is a function of Column, if otherwise() is not used, it returns a None/NULL value.
 - PySpark SQL Case When – This is similar to SQL expression, Usage: CASE WHEN cond1 THEN result WHEN cond2 THEN result... ELSE result END.
+- Learned about Hadoop and map Reduce concepts relates to PySpark
+- Learned about Spark engine workflows in which it has master and worker node like concepts.
