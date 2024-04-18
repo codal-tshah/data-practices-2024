@@ -46,3 +46,11 @@
 - PySpark SQL Case When – This is similar to SQL expression, Usage: CASE WHEN cond1 THEN result WHEN cond2 THEN result... ELSE result END.
 - Learned about Hadoop and map Reduce concepts relates to PySpark
 - Learned about Spark engine workflows in which it has master and worker node like concepts.
+
+18_apr:
+- Create an empty DataFrame
+- Convert RDD to DataFrame
+- Convert DataFrame to Pandas
+- show()
+- StructType & StructFie1d
+-Column Class
