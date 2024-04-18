@@ -217,3 +217,78 @@ arrayStructureSchema = StructType(
         StructField("properties", MapType(StringType(), StringType()), True),
     ]
 )
+
+"""# **Column Class | Operators & Functions**
+
+**Create Column Class Object**
+"""
+
+from pyspark.sql.functions import lit
+
+colObj = lit("sparkbyexamples.com")
+
+data = [("James", 23), ("Ann", 40)]
+df = spark.createDataFrame(data).toDF("name", "gender")
+df.printSchema()
+
+# Using DataFrame object (df)
+df.select(df.gender).show()
+df.select(df["gender"]).show()
+# Accessing column name with dot (with backticks)
+df.select(df["`name`"]).show()
+
+# Using SQL col() function
+from pyspark.sql.functions import col
+
+df.select(col("gender")).show()
+# Accessing column name with dot (with backticks)
+df.select(col("`name`")).show()
+
+data = [
+    ("James", "Bond", "100", None),
+    ("Ann", "Varsa", "200", "F"),
+    ("Tom Cruise", "XXX", "400", ""),
+    ("Tom Brand", None, "400", "M"),
+]
+columns = ["fname", "lname", "id", "gender"]
+df = spark.createDataFrame(data, columns)
+df.show()
+
+# alias
+from pyspark.sql.functions import expr
+
+df.select(df.fname.alias("first_name"), df.lname.alias("last_name")).show()
+
+# Another example
+df.select(expr(" fname ||','|| lname").alias("fullName")).show()
+
+df.sort(df.fname.asc()).show()
+df.sort(df.fname.desc()).show()
+
+df.filter(df.id.between(100, 300)).show()
+
+df.filter(df.fname.contains("B")).show()
+
+df.select(df.fname, df.lname, df.id).filter(df.fname.like("%om"))
+
+from pyspark.sql.functions import when
+
+df.select(
+    df.fname,
+    df.lname,
+    when(df.gender == "M", "Male")
+    .when(df.gender == "F", "Female")
+    .when(df.gender == None, "")
+    .otherwise(df.gender)
+    .alias("new_gender"),
+).show()
+
+df.filter(df.gender.isNull()).show()
+
+df.printSchema()
+
+# getItem() used with ArrayType
+# df.select(df.languages.getItem(1)).show()
+
+# getItem() used with MapType
+df.select(df.lname.getItem("xxx")).show()
