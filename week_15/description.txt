@@ -50,3 +50,9 @@
         - Exploring the Column Class
 
 19_apr:
+    - ClaiDeck:
+        - Making of test_view.py file for globalsearch
+        - Pass out the 3 test cases for views.py
+        - Making up factories.py file for globalsearch
+    - PySpark:
+        - Learning of PySpark Select Columns From DataFrame
