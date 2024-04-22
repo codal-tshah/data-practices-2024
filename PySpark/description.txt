@@ -54,3 +54,7 @@
 - show()
 - StructType & StructFie1d
 - Column Class
+
+22_apr:
+- PySpark Collect() – Retrieve data from DataFrame
+  - 
