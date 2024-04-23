@@ -56,5 +56,14 @@
 - Column Class
 
 22_apr:
-- PySpark Collect() – Retrieve data from DataFrame
-  - 
+- Collect() – Retrieve data from DataFrame
+- select()
+- collect()
+- withCoIumn()
+- withColumnRenamed()
+- where() & filter()
+- drop() & dropDuplicates()
+- apply()
+- map()
+- flatMap()
+- foreach()

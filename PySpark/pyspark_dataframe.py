@@ -348,3 +348,249 @@ df.select(df.columns[:3]).show(3)
 
 # Selects columns 2 to 4  and top 3 r
 df.select(df.columns[2:4]).show(3)
+
+
+"""# **COLLECT()**
+
+**collect() is an action hence it does not return a DataFrame instead, it returns data in an Array to the driver.**
+"""
+
+import pyspark
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder.appName("SparkByExamples.com").getOrCreate()
+
+dept = [("Finance", 10), ("Marketing", 20), ("Sales", 30), ("IT", 40)]
+deptColumns = ["dept_name", "dept_id"]
+deptDF = spark.createDataFrame(data=dept, schema=deptColumns)
+deptDF.show(truncate=False)
+
+dataCollect = deptDF.collect()
+print(dataCollect)
+
+for row in dataCollect:
+    print(row["dept_name"] + "," + str(row["dept_id"]))
+
+"""# **Where Filter**"""
+
+from pyspark.sql.types import StructType, StructField
+from pyspark.sql.types import StringType, IntegerType, ArrayType
+
+data = [
+    (("James", "", "Smith"), ["Java", "Scala", "C++"], "OH", "M"),
+    (("Anna", "Rose", ""), ["Spark", "Java", "C++"], "NY", "F"),
+    (("Julia", "", "Williams"), ["CSharp", "VB"], "OH", "F"),
+    (("Maria", "Anne", "Jones"), ["CSharp", "VB"], "NY", "M"),
+    (("Jen", "Mary", "Brown"), ["CSharp", "VB"], "NY", "M"),
+    (("Mike", "Mary", "Williams"), ["Python", "VB"], "OH", "M"),
+]
+
+schema = StructType(
+    [
+        StructField(
+            "name",
+            StructType(
+                [
+                    StructField("firstname", StringType(), True),
+                    StructField("middlename", StringType(), True),
+                    StructField("lastname", StringType(), True),
+                ]
+            ),
+        ),
+        StructField("languages", ArrayType(StringType()), True),
+        StructField("state", StringType(), True),
+        StructField("gender", StringType(), True),
+    ]
+)
+
+df = spark.createDataFrame(data=data, schema=schema)
+df.printSchema()
+df.show(truncate=False)
+
+df.filter(df.state == "OH").show(truncate=False)
+
+# not equals condition
+df.filter(df.state != "OH").show(truncate=False)
+df.filter(~(df.state == "OH")).show(truncate=False)
+
+df.filter("gender <> 'M'").show()
+
+li = ["OH", "CA", "DE"]
+df.filter(df.state.isin(li)).show()
+
+# Filter NOT IS IN List values
+# These show all records with NY (NY is not part of the list)
+df.filter(~df.state.isin(li)).show()
+df.filter(df.state.isin(li) == False).show()
+
+# Prepare Data
+data2 = [
+    (2, "Michael Rose"),
+    (3, "Robert Williams"),
+    (4, "Rames Rose"),
+    (5, "Rames rose"),
+]
+df2 = spark.createDataFrame(data=data2, schema=["id", "name"])
+
+# like - SQL LIKE pattern
+df2.filter(df2.name.like("%rose%")).show()
+
+df2.filter(df2.name.rlike("(?i)^*rose$")).show()
+
+"""# **Distinct to Drop Duplicate**
+
+distinct() transformation is used to drop/remove the duplicate rows (all columns) from DataFrame and dropDuplicates() is used to drop rows based on selected (one or multiple) columns.
+"""
+
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import expr
+
+spark = SparkSession.builder.appName("SparkByExamples.com").getOrCreate()
+
+data = [
+    ("James", "Sales", 3000),
+    ("Michael", "Sales", 4600),
+    ("Robert", "Sales", 4100),
+    ("Maria", "Finance", 3000),
+    ("James", "Sales", 3000),
+    ("Scott", "Finance", 3300),
+    ("Jen", "Finance", 3900),
+    ("Jeff", "Marketing", 3000),
+    ("Kumar", "Marketing", 2000),
+    ("Saif", "Sales", 4100),
+]
+columns = ["employee_name", "department", "salary"]
+df = spark.createDataFrame(data=data, schema=columns)
+df.printSchema()
+df.show(truncate=False)
+
+# Distinct
+distinctDF = df.distinct()
+print("Distinct count: " + str(distinctDF.count()))
+distinctDF.show(truncate=False)
+
+# Drop duplicates
+df2 = df.dropDuplicates()
+print("Distinct count: " + str(df2.count()))
+df2.show(truncate=False)
+
+# Drop duplicates on selected columns
+dropDisDF = df.dropDuplicates(["department", "salary"])
+print("Distinct count of department salary : " + str(dropDisDF.count()))
+dropDisDF.show(truncate=False)
+
+"""# **MAP()**"""
+
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder.appName("SparkByExamples.com").getOrCreate()
+
+data = [
+    "Project",
+    "Gutenberg’s",
+    "Alice’s",
+    "Adventures",
+    "in",
+    "Wonderland",
+    "Project",
+    "Gutenberg’s",
+    "Adventures",
+    "in",
+    "Wonderland",
+    "Project",
+    "Gutenberg’s",
+]
+
+rdd = spark.sparkContext.parallelize(data)
+
+rdd2 = rdd.map(lambda x: (x, 1))
+for element in rdd2.collect():
+    print(element)
+
+data = [
+    ("James", "Smith", "M", 30),
+    ("Anna", "Rose", "F", 41),
+    ("Robert", "Williams", "M", 62),
+]
+
+columns = ["firstname", "lastname", "gender", "salary"]
+df = spark.createDataFrame(data=data, schema=columns)
+df.show()
+
+rdd2 = df.rdd.map(lambda x: (x[0] + "," + x[1], x[2], x[3] * 2))
+df2 = rdd2.toDF(["name", "gender", "new_salary"])
+df2.show()
+
+# Referring Column Names
+rdd2 = df.rdd.map(
+    lambda x: (x["firstname"] + "," + x["lastname"], x["gender"], x["salary"] * 2)
+)
+
+# Referring Column Names
+rdd2 = df.rdd.map(lambda x: (x.firstname + "," + x.lastname, x.gender, x.salary * 2))
+
+
+def func1(x):
+    firstName = x.firstname
+    lastName = x.lastname
+    name = firstName + "," + lastName
+    gender = x.gender.lower()
+    salary = x.salary * 2
+    return (name, gender, salary)
+
+
+rdd2 = df.rdd.map(lambda x: func1(x))
+
+"""# **FLAT MAP()**"""
+
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder.appName("SparkByExamples.com").getOrCreate()
+
+data = [
+    "Project Gutenberg’s",
+    "Alice’s Adventures in Wonderland",
+    "Project Gutenberg’s",
+    "Adventures in Wonderland",
+    "Project Gutenberg’s",
+]
+rdd = spark.sparkContext.parallelize(data)
+for element in rdd.collect():
+    print(element)
+
+# Flatmap
+rdd2 = rdd.flatMap(lambda x: x.split(" "))
+for element in rdd2.collect():
+    print(element)
+
+"""**Unfortunately, PySpark DataFame doesn’t have flatMap() transformation however, DataFrame has explode() SQL function that is used to flatten the column.**"""
+
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder.appName("pyspark-by-examples").getOrCreate()
+
+arrayData = [
+    ("James", ["Java", "Scala"], {"hair": "black", "eye": "brown"}),
+    ("Michael", ["Spark", "Java", None], {"hair": "brown", "eye": None}),
+    ("Robert", ["CSharp", ""], {"hair": "red", "eye": ""}),
+    ("Washington", None, None),
+    ("Jefferson", ["1", "2"], {}),
+]
+df = spark.createDataFrame(
+    data=arrayData, schema=["name", "knownLanguages", "properties"]
+)
+
+from pyspark.sql.functions import explode
+
+df2 = df.select(df.name, explode(df.knownLanguages))
+df2.printSchema()
+df2.show()
+
+from pyspark.sql import SparkSession
+
+spark = (
+    SparkSession.builder.master("local[1]").appName("SparkByExamples.com").getOrCreate()
+)
+
+df = spark.range(100)
+print(df.sample(0.05, 123).collect())
