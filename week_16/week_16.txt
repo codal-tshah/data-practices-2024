@@ -1,0 +1,11 @@
+22_apr:
+- ClaimDeck:
+    - Progressed with test_views.py.
+    - Resolved "invalid_token" error.
+    - Achieved 80% test coverage.
+
+- PySpark DataFrame Operations:
+    - Collect(), select(), collect().
+    - withColumn(), withColumnRenamed().
+    - where(), filter(), drop(), dropDuplicates().
+    - apply(), map(), flatMap(), foreach().

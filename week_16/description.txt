@@ -1,0 +1,19 @@
+22_apr:
+- ClaimDeck:
+    - Progressed with test_views.py implementation.
+    - Resolved the issue of "invalid_token" error in unit test_views.
+    - Achieved test coverage of up to 80% in test_views.py.
+
+- PySpark:
+    - Explored DataFrame operations:
+        - Collect(): Retrieve data from DataFrame.
+        - select()
+        - collect()
+        - withColumn()
+        - withColumnRenamed()
+        - where() & filter()
+        - drop() & dropDuplicates()
+        - apply()
+        - map()
+        - flatMap()
+        - foreach()
