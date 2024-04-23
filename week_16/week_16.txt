@@ -9,3 +9,18 @@
     - withColumn(), withColumnRenamed().
     - where(), filter(), drop(), dropDuplicates().
     - apply(), map(), flatMap(), foreach().
+
+23_apr:
+- ClaimDeck:
+    - Configured factory for configvalue.
+    - Enhanced test coverage for views.
+
+- PySpark:
+    - DataFrame operations:
+        - drop() & dropDuplicates().
+        - orderBy(), sort(), groupBy(), join().
+        - union(), unionAll(), unionByName().
+        - transform(), sample() vs sampleBy().
+        - fillna() & fill().
+        - pivot() (Row to Column), partitionBy().
+        - MapType (Map/Dict).

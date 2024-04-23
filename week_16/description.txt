@@ -17,3 +17,22 @@
         - map()
         - flatMap()
         - foreach()
+    
+23_apr:
+    - ClaimDeck:
+        - Configured factory for configvalue.
+        - Enhanced test coverage for views.
+
+    - PySpark:
+        - drop() & dropDuplicates().
+        - orderBy() and sort().
+        - groupBy().
+        - join().
+        - union() & unionAll().
+        - unionByName().
+        - transform().
+        - sample() vs sampleBy().
+        - fillna() & fill().
+        - pivot() (Row to Column).
+        - partitionBy().
+        - MapType (Map/Dict).
