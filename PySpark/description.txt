@@ -80,3 +80,9 @@
 - pivot() (Row to Column)
 - partitionBy() 
 - MapType (Map/Dict)
+
+24_apr:
+- PySpark SQL Functions
+  - Aggregate Functions
+  - Window Functions
+  - JSON Functions
