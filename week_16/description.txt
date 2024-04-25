@@ -48,3 +48,13 @@
             - Aggregate Functions
             - Window Functions
             - JSON Functions
+
+25_apr:
+    - ClaimDeck:
+        - Completed unit testing for views.py file.
+        - Completed unit testing for admin.py file.
+        - Initiated learning about response validation in test cases.
+
+    - PySpark:
+        - PySpark Datasources:
+            - CSV

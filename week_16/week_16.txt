@@ -34,3 +34,11 @@
 - PySpark:
     - Introduced PySpark SQL Functions:
         - Aggregate, Window, and JSON Functions.
+    
+25_apr:
+- ClaimDeck:
+    - Completed unit testing for views and admin files.
+    - Started learning response validation.
+
+- PySpark:
+    - Explored PySpark CSV datasources.
