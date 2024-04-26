@@ -42,3 +42,10 @@
 
 - PySpark:
     - Explored PySpark CSV datasources.
+
+26_apr:
+- ClaiDeck:
+    - Draft PR created, issue resolved in tests/account/views.py
+
+- PySpark:
+    - Explored Parquet File as a PySpark datasource.

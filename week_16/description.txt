@@ -58,3 +58,12 @@
     - PySpark:
         - PySpark Datasources:
             - CSV
+        
+26_apr:
+    - ClaimDeck:
+        - Created a draft pull request.
+        - Resolved an issue in tests/account/views.py.
+
+    - PySpark:
+        - Explored PySpark Datasources:
+            - Parquet File.
