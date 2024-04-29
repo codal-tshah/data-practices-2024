@@ -1,0 +1,8 @@
+29_apr:
+- PySpark:
+  - Hands-on project with data from Google Play Store.
+  - Data cleaning and problem-solving.
+
+- ClaimDeck:
+  - Addressed queryset and response issues.
+  - Improved coverage in serializers.

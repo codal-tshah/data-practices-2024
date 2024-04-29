@@ -1,0 +1,9 @@
+29_apr:
+- PySpark:
+  - Conducted hands-on practice with a small project involving Google Play Store data.
+  - Engaged in data cleaning and problem-solving tasks on the dataset.
+
+- ClaimDeck:
+  - Addressed data response issues in the queryset.
+  - Rectified empty responses in claims and documents.
+  - Achieved 90% coverage in serializers.
