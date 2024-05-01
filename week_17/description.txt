@@ -7,3 +7,12 @@
   - Addressed data response issues in the queryset.
   - Rectified empty responses in claims and documents.
   - Achieved 90% coverage in serializers.
+
+30_apr:
+  - PySpark:
+    - Made a json data extarction in pandas 
+    - Started Data Warehouse 
+
+  - ClaimDeck:
+    - made a serializers.py 100% coverage
+    - working on search_utils.py 
