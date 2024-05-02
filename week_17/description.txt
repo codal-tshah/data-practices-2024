@@ -14,5 +14,11 @@
     - Started Data Warehouse 
 
   - ClaimDeck:
-    - made a serializers.py 100% coverage
+    - made a pagination.py 100% coverage
     - working on search_utils.py 
+  
+2_may:
+  - ClaimDeck:
+    - Covered serializers 97% coverages
+    - upload the file locally in pytest 
+    - made search_utils.py coverages upto 90%
