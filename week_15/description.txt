@@ -7,3 +7,30 @@
         - Reading Multiple JSON Files: Handling the reading of multiple JSON files from a folder using PySpark.
         - Reading and Writing Parquet Files: Using PySpark to read Parquet files into DataFrames and write DataFrames into Parquet files.
         - DataFrame Operations: Demonstrating DataFrame operations such as displaying DataFrame contents with `show()`, adding or changing columns with `withColumn()`, and renaming columns with `withColumnRenamed()` in PySpark.
+
+16_apr:
+    - ClaiDeck:
+        - Learning of Writing of Pytest
+            - Started breifing of globalsearch 
+
+    - PySpark:
+        - StructType: Defining DataFrame structure.
+        - StructField: Specifying column metadata.
+        - PySpark ArrayType():
+            - Utilizing explode() to expand array elements into separate rows.
+            - Applying split() to divide string columns by a delimiter.
+            - Creating new array columns with array() function.
+            - Checking array membership with array_contains() function.
+
+17_apr:
+    - ClaiDeck:
+        - Unit Testing:
+            - Understanding test coverage analysis.
+            - Initiating creation of test_models.py for globalsearch.
+
+    - PySpark:
+        - Local Mode: Utilizing "local" as the master() parameter to run Spark locally on a machine.
+        - PySpark When Otherwise: Exploring the functionality of when() and otherwise() functions in PySpark.
+        - PySpark SQL Case When: Introduction to CASE WHEN expressions in PySpark SQL.
+        - Hadoop and Map Reduce Concepts: Learning about Hadoop and its relation to PySpark.
+        - Spark Engine Workflows: Understanding the workflow of Spark engine, including master and worker node concepts.
