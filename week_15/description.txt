@@ -34,3 +34,17 @@
         - PySpark SQL Case When: Introduction to CASE WHEN expressions in PySpark SQL.
         - Hadoop and Map Reduce Concepts: Learning about Hadoop and its relation to PySpark.
         - Spark Engine Workflows: Understanding the workflow of Spark engine, including master and worker node concepts.
+    
+18_apr:
+    - ClaiDeck:
+        - Test case creation for globalsearch in models.py
+        - Initiated test_views.py setup for globalsearch, including user creation
+        - Learning about factories implementation
+
+    - PySpark:
+        - Creating an empty DataFrame
+        - Converting RDD to DataFrame
+        - Converting DataFrame to Pandas
+        - Using the show() function
+        - Understanding StructType and StructField
+        - Exploring the Column Class
