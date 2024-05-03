@@ -53,4 +53,17 @@
 - Convert DataFrame to Pandas
 - show()
 - StructType & StructFie1d
--Column Class
+- Column Class
+
+22_apr:
+- Collect() – Retrieve data from DataFrame
+- select()
+- collect()
+- withCoIumn()
+- withColumnRenamed()
+- where() & filter()
+- drop() & dropDuplicates()
+- apply()
+- map()
+- flatMap()
+- foreach()
