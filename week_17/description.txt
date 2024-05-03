@@ -22,3 +22,12 @@
     - Covered serializers 97% coverages
     - upload the file locally in pytest 
     - made search_utils.py coverages upto 90%
+
+3_may:
+  - Data Warehouse:
+    - 
+  
+  - ClaimDeck:
+    - Made a commits for Test Cases
+    - Covered serializers 98% 
+    - Covered search_utils 93% 
