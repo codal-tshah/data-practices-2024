@@ -1,0 +1,13 @@
+6_may:
+    - Data Warehouse:
+        - AWS Redshift Introduction
+
+7_may:
+    - Data Warehouse:
+        - AWS Redshift console management.
+        - Custom services setup for AWS Redshift:
+            - Configuring S3 bucket access.
+        - Creating AWS Redshift clusters.
+        - Loading data into AWS Redshift services:
+            - Locally loading data.
+            - Loading data from S3 bucket.
