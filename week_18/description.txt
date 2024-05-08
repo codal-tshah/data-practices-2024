@@ -11,3 +11,9 @@
         - Loading data into AWS Redshift services:
             - Locally loading data.
             - Loading data from S3 bucket.
+
+8_may:
+    - Data Warehouse:
+        - Explored Redshift connection with ETL 
+        - ETL Introduction
+        - ETL process overview
