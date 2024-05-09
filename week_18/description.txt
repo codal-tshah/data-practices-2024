@@ -17,3 +17,7 @@
         - Explored Redshift connection with ETL 
         - ETL Introduction
         - ETL process overview
+
+9_may:
+    - Data Warehouse:
+        - started learning of ETL Pipelines Tutorial | World Bank Dataset from kaggle
