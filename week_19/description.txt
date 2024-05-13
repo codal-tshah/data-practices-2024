@@ -5,3 +5,5 @@
             You use an ETL tool like Apache Airflow or AWS Glue to extract this data, transform it into a suitable format (e.g., cleaning, aggregating, joining tables), and then load it into AWS Redshift. Once the data is in Redshift, you can run SQL queries to analyze it. For example, you might want to analyze sales trends, customer behavior, or product performance.
 
             Finally, you use a BI tool like Tableau or Amazon QuickSight to visualize the insights gained from the analysis, creating charts and dashboards that help you understand and communicate the data effectively.
+
+- learning ETL pipelines extraction and tranformation
