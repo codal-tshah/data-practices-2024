@@ -12,3 +12,24 @@
     - ClaimDeck:
         - Started writing Pytest for numbersviewset
         - writing for claim_valuation function 
+
+14_may:
+    - Data Warehouse:
+        - Setting up github conflict
+        - Ended making of ETL pipelines
+
+    - ClaimDeck:
+        - (spent 8 hours on pytest only)
+        - Setup setup_model_objects for numbersviewset
+        - Written Pytest for numbersviewset
+            - test_get_serializer_class_valuation_data
+            - test_get_serializer_class_budget_data
+            - test_get_serializer_class_policy_data
+            - test_get_serializer_class_liens_data
+            - test_get_serializer_class_reserve_data
+            - test_get_valuation_data
+            - test_get_policy_data
+            - test_get_liens_data_with_liens
+            - test_get_liens_data_with_no_data
+            - test_get_liens_invalid_claim_id
+        - covered up the 70% for numbersviewset and overall viewset increased upto 18% to 22%            
