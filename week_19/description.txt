@@ -62,8 +62,16 @@
         - covered up the 98% for numbersviewset and overall viewset increased upto 18% to 25% 
 
 16_may: 
-    - Amazon Redshift: A fully managed data warehouse service.
-    - ETL applied to load the finalized data into datawarehouse tables
-    - copy job is use to integrate data directly from s3 to redshift.
+    - ClaimDeck:
+        - Covered up 100% test cases for numbersviewset
+        - making up the best coverages by adding response in it 
+        - working on org_type = carrier for orgnization and user
+        - covered up get_reserve_data api for private organization
+
+    - AWS Redshift:
+        - Amazon Redshift: A fully managed data warehouse service.
+        - ETL applied to load the finalized data into datawarehouse tables
+        - copy job is use to integrate data directly from s3 to redshift.
+
      
     
