@@ -74,8 +74,11 @@
 
 17_may: 
     - ClaimDeck:
-        - 
+        - covered up the response data for org_type 
+        - making get_budget not none 
     
     - redshift:
-        - manageing the cluster in aws 
-        - 
+        - managing the cluster in aws 
+        - removed cluster and stopped services 
+        - working on Dbeaver and connecting to serverless redshift service
+        - created tables and loading data from s3.
