@@ -19,12 +19,23 @@
 --    address VARCHAR(200)
 --);
 --
---CREATE TABLE my_schema.products (
---    product_id INT,
---    product_name VARCHAR(100),
---    category VARCHAR(50),
---    price DECIMAL(10, 2)
---);
+CREATE TABLE my_schema.products (
+    product_id INT,
+    product_name VARCHAR(100),
+    category VARCHAR(50),
+    price DECIMAL(10, 2)
+);
+
+
+CREATE TABLE IF NOT exists my_schema.products_null (
+    product_id INT,
+    product_name VARCHAR(100),
+    category VARCHAR(50),
+    price DECIMAL(10, 2)
+);
+
+select * from my_schema.products_null;
+
 
 
 --load sales data from s3
@@ -72,6 +83,8 @@ select * from my_schema.customers;
 select * from my_schema.products;
 
 select * from my_schema.sales;
+
+select * from my_schema.sales_dict;
 
 -- distribution key and sort keys(read) --redshift 
 -- columnar storage 
@@ -124,5 +137,89 @@ WHERE
 
 
 
+CREATE TABLE my_schema.sales_dict(
+    sale_id INT,
+    sale_date DATE,
+    customer_id INT,
+    product_id INT,
+    quantity INT,
+    total_amount DECIMAL(10, 2)
+)
+DISTSTYLE KEY
+DISTKEY(customer_id);
+
+copy my_schema.sales_dict
+from 's3://becketfortrial/demo_data/sales.csv'
+IAM_ROLE default
+FORMAT as csv
+IGNOREHEADER 1;
 
 
+select * from my_schema.sales_dict;
+
+
+
+
+CREATE TABLE my_schema.sales_sort (
+    sale_id INT,
+    sale_date DATE,
+    customer_id INT,
+    product_id INT,
+    quantity INT,
+    total_amount DECIMAL(10, 2)
+)
+SORTKEY (sale_date, quantity);
+
+
+copy my_schema.sales_sort
+from 's3://becketfortrial/demo_data/sales.csv'
+IAM_ROLE default
+FORMAT as csv
+IGNOREHEADER 1;
+
+
+select * from my_schema.sales_sort;
+
+
+CREATE TABLE my_schema.customers_dist (
+    customer_id INT,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(100),
+    phone VARCHAR(20),
+    address VARCHAR(200)
+)
+SORTKEY (first_name);
+
+
+
+
+copy my_schema.customers_dist
+from 's3://becketfortrial/demo_data/customers.csv'
+IAM_ROLE default
+FORMAT as csv
+IGNOREHEADER 1;
+
+
+select * from my_schema.products;
+
+
+CREATE TABLE my_schema.products_dist (
+    product_id INT,
+    product_name VARCHAR(100),
+    category VARCHAR(50),
+    price DECIMAL(10, 2)
+)
+DISTSTYLE KEY
+DISTKEY(category);
+
+
+
+copy my_schema.products_dist
+from 's3://becketfortrial/demo_data/products.csv'
+IAM_ROLE default
+FORMAT as csv
+IGNOREHEADER 1;
+
+
+select * from my_schema.products_dist;
