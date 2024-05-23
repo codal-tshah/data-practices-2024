@@ -23,3 +23,14 @@
             - Printed data using pandas DataFrame.
         - Resolved sys_load_error_detail issue by printing error details.
 
+22_may:
+    - ClaimDeck:
+        - Writing up the pytest for matter/ClaiValuationViewSet
+            - Written up the 4 test cases 
+                - 2 passed and 2 failed 
+                - stuck in the error of 'str' object has no attribute 'get'
+                
+    - Redshift:
+        - Updated the script for good result 
+        - added .env files 
+        - remove the credentials from main file
