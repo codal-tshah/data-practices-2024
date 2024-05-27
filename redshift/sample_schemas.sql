@@ -223,3 +223,52 @@ IGNOREHEADER 1;
 
 
 select * from my_schema.products_dist;
+
+
+
+
+---------------------------   trial ---------------------------
+
+ CREATE TABLE IF NOT exists my_schema.order_items (
+   order_id varchar(32) NOT NULL,
+   order_item_id decimal(10,0) NOT NULL,
+   product_id varchar(32) NOT NULL,
+   seller_id varchar(32) NOT NULL,
+   shipping_limit_date timestamp NULL DEFAULT NULL,
+   price decimal(10,0) NOT NULL,
+   freight_value decimal(10,0) NOT NULL,
+   order_purchase_timestamp timestamp NULL DEFAULT NULL
+ );
+
+
+copy my_schema.order_items 
+from 's3://becketfortrial/udemy/order_items'
+IAM_ROLE default   --'arn:aws:iam::905418442130:user/tshah' 
+FORMAT as csv
+IGNOREHEADER 1;
+
+select * from my_schema.order_items;
+
+
+
+ CREATE TABLE IF NOT exists public.order_items (
+   order_id varchar(32) NOT NULL,
+   order_item_id decimal(10,0) NOT NULL,
+   product_id varchar(32) NOT NULL,
+   seller_id varchar(32) NOT NULL,
+   shipping_limit_date timestamp NULL DEFAULT NULL,
+   price decimal(10,0) NOT NULL,
+   freight_value decimal(10,0) NOT NULL,
+   order_purchase_timestamp timestamp NULL DEFAULT NULL
+ );
+
+
+copy public.order_items 
+from 's3://becketfortrial/udemy/order_items'
+IAM_ROLE default   --'arn:aws:iam::905418442130:user/tshah' 
+FORMAT as csv
+IGNOREHEADER 1;
+
+select * from my_schema.order_items;
+
+
