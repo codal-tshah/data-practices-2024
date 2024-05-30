@@ -33,18 +33,34 @@
         - Made a commit, pushed the branch, and resolved code conflicts.
         - Checked dependencies suggested by Dependabot in PRs for `requirements.txt`.
 
-29_may:
-    - ETL:
-        - Performed a ETL on order_reviews
-            - removed null rows
-            - split the data from date and time 
-            - removed columns which are unnecessary
-            - changes dtypes 
-            - made a dump file data and store it in csv file again
-        - made a new table with different datatypes 
-        - loaded data in dbeaver using import data
+29 May:
+    - ETL: (6.5 hrs)
+        - Performed an ETL on order_reviews:
+            - Removed null rows
+            - Split the data from date and time
+            - Removed unnecessary columns
+            - Changed data types
+            - Created a dump file and stored it in a CSV file
+        - Created a new table with different data types
+        - Loaded data in DBeaver using import data
 
-    - ClaimDeck:
-        - started working on verfication ticket:
-            - encoutered issue in event icon is not made 
-            
+    - ClaimDeck: (1.5 hrs)
+        - Started working on verification ticket:
+            - Encountered an issue where the event icon is not created
+
+30 May:
+    - ETL:
+        - Downloaded py and ipynb files for commits
+
+    - ClaimDeck: (6 hrs)
+        - Worked on verification ticket:
+            - Verified dev server credentials
+            - Verified QA server
+            - Found some issues from BE:
+                - Issues in visibility of private events
+            - Found issues in FE:
+                - Box alignment is not proper
+                - Event icon is missing
+                - Color icon is not aligned
+            - Worked on different users in two organizations
+            - Raised a query regarding visibility of private events by the admin of a different organization          
