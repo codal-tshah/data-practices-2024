@@ -63,4 +63,17 @@
                 - Event icon is missing
                 - Color icon is not aligned
             - Worked on different users in two organizations
-            - Raised a query regarding visibility of private events by the admin of a different organization          
+            - Raised a query regarding visibility of private events by the admin of a different organization   
+ 
+31_may:
+    - ETL
+        Progress:
+        - Began exploring AWS Glue for setting up the ETL pipeline. Configuration is not complete yet.
+        - Encountered an error while connecting the PostgreSQL database on RDS to AWS Glue for triggers.
+        - Working on creating a script to automate ETL jobs.
+
+    - ClaimDeck:
+        - Investigated the issue regarding the visibility of the red dot on dismissed notifications:
+            - Found that the values `{"global":true,"task_request":true}` should be `false` for the last dismissed notification.
+        - Started addressing a ticket related to the visibility of profile pictures:
+            - Verified functionality for one user, and it appears to be working fine.
