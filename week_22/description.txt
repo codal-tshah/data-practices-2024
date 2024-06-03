@@ -1,0 +1,9 @@
+3_june:
+    - ClaimDeck:
+        - Comment out on the ticket of Profile Pic enhancement:
+            - Checked out and there is no issue in it.
+        - Working on red dot visibilty while dclined the notification
+            - found out the issue and remove delay in destroy API
+            - if delay we use its not updating while declined the notification
+            - started debugging the issue to fix using even delay used in celery 
+            - using django debugger for finding up.
