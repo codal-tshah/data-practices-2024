@@ -77,3 +77,13 @@
             - Found that the values `{"global":true,"task_request":true}` should be `false` for the last dismissed notification.
         - Started addressing a ticket related to the visibility of profile pictures:
             - Verified functionality for one user, and it appears to be working fine.
+
+32_may: 
+    - ClaimDeck:
+        - Debug the partial_update for (mark as read) and destroy for (deleting the notification)
+        - While removing delay from destroy API it works perfectly fine. 
+
+    - ETL:
+        - started learning for setting up the connection between RDS and Redshift
+            - using estuary 
+            - got failed while makin connection 

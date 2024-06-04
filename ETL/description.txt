@@ -29,3 +29,9 @@ Alternative Data Loading Method:
 - **Load CSV File Using GUI in DBeaver:**
   - Use DBeaver's import data feature to load the CSV file directly into your table, bypassing the `COPY` command.
 
+4_june:
+- we can connect RDS to redshift and transfer data in following ways 
+   - can create a aws glue job for ETL 
+   - can use dblink to transfer it 
+   - can restore data to s3 and create table to redshift again and do create table and load data again as manual approach 
+   - 
