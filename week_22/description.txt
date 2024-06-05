@@ -22,10 +22,10 @@
                 - Created PRs for both development and production (CD-435-dev).
 
 5_june:
-    - PowerBI:
-        - 3 services are there in BI (desktop, service, reposrt builder)
-        - started learning Tableau
-            - working on sample data of superstore.xls
-            - making of various sheets of dashboard on Tableau
-            - learning from documentation
-            - making of dashboard from sheets 
+    - Tableau:
+        - Explored the three main services in BI: Desktop, Service, and Report Builder.
+        - Began learning Tableau:
+            - Worked on sample data from superstore.xls.
+            - Created various sheets for the dashboard in Tableau.
+            - Studied Tableau documentation.
+            - Developed a dashboard from the created sheets.
