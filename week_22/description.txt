@@ -12,7 +12,7 @@
 4_june:
     - ETL:
         - Learning to Set Up the Connection Between RDS and Redshift:
-            - Attempted using Estuary for the connection.
+            - Attempted using Estuary for the connection.(link: https://estuary.dev/rds-to-redshift/ )
             - Encountered a failure while making the connection.
 
     - ClaimDeck:
@@ -42,6 +42,22 @@
             - Created a small notebook for Airbnb analysis using data from Kaggle.
             - Gained insights using Seaborn.
 
+        - searching for stock market data to make a demo project 
+
     - ClaimDeck:
         - Tested profile pic enhancement for spacing on names, which worked perfectly fine.
         - Attached screenshots to the red dot ticket and profile pic enhancement. 
+
+7_june
+    - End-to-End Project:
+        - Data Sources:
+            - [NSE India Historical Index Data](https://www.nseindia.com/reports-indices-historical-index-data)
+            - [NSE India Historical Index Data](https://www.nseindia.com/reports-indices-historical-index-data)
+        - Project Development:
+            - Established project flow end-to-end.
+            - Cleaned data structure by adding symbols to all CSV data.
+            - Currently developing an ETL script for integration with AWS Lambda triggers.
+
+    - ClaimDeck:
+        - Test Case Development:
+            - Initiated writing test cases for "MatterClaimPlaintiffClaimInformationViewsetOverview".
