@@ -25,3 +25,13 @@
     - Claimdeck:
         - worked on story's(CD-304) DEV verification(CD-465)
         - worked on issue CD-468 regarding the red dot issue and found out the reason of issue is comign from FE
+
+14_june:
+    - helping in global search issues 
+    - setup of lawson project , takes time due to python version
+    - watching out the scrapy for webscrapping in existing Code.
+        - scrapping bee 
+        - tool
+        - desktop scrapper - scrape box (for smaller projects)
+            - Runs on your local machine
+        - Instant Data Scraper - limited actions
