@@ -27,11 +27,13 @@
         - worked on issue CD-468 regarding the red dot issue and found out the reason of issue is comign from FE
 
 14_june:
-    - helping in global search issues 
-    - setup of lawson project , takes time due to python version
-    - watching out the scrapy for webscrapping in existing Code.
-        - scrapping bee 
-        - tool
-        - desktop scrapper - scrape box (for smaller projects)
-            - Runs on your local machine
-        - Instant Data Scraper - limited actions
+    - Claimdeck:
+        -  Assisted with global search issues.
+
+    - Lawson:
+        - Set up the Lawson project, which took time due to Python version compatibility.
+        - Researched web scraping tools to determine the best option:
+            - ScrapingBee: A subscription-based tool.
+            - Desktop Scraper - ScrapeBox: Suitable for smaller projects and runs on your local machine.
+            - Instant Data Scraper: Limited actions.
+        - Set up Scrapy for web scraping on the Zoro website.
