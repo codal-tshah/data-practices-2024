@@ -12,19 +12,21 @@
         - Set up an RDS PostgreSQL database and table to connect to Lambda for the demo.
 
 11_june:
-    - Created a PowerPoint presentation for Data Practices.
-    - Checked the Lambda trigger and resolved errors in the demo project.
+    - Demo Project:
+        - Created a PowerPoint presentation for Data Practices.
+        - Checked the Lambda trigger and resolved errors in the demo project.
 
 12_june:
-    - Resolved the issue of moving CSV files to another folder by increasing the Lambda timeout from 3 to 5 minutes.
-    - Created tables and loaded CSV files into them.
-    - Researched methods for loading multiple files into a table simultaneously.
-    - Completed and presented the PowerPoint presentation.
+    - Demo_project(Data Practices)
+        - Resolved the issue of moving CSV files to another folder by increasing the Lambda timeout from 3 to 5 minutes.
+        - Created tables and loaded CSV files into them.
+        - Researched methods for loading multiple files into a table simultaneously.
+        - Completed and presented the PowerPoint presentation.
 
-13_june:
+13_june:    
     - Claimdeck:
-        - worked on story's(CD-304) DEV verification(CD-465)
-        - worked on issue CD-468 regarding the red dot issue and found out the reason of issue is comign from FE
+        - Worked on story CD-304 and its DEV verification (CD-465).
+        - Addressed issue CD-468 regarding the red dot problem, determining the issue originates from the front end.
 
 14_june:
     - Claimdeck:
