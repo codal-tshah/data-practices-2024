@@ -23,3 +23,18 @@
         - Created a Python script for web scraping data from 'zoro.com'.
         - Implemented pagination in the script to handle large data sets from Zoro.
         - Added a small script to format and clean the scraped data.   
+
+19_june:
+    - ClaimDeck:
+        - Started working on exporting the claim table and encountered an "Invalid string format" issue.
+        - Deleted the existing ClaimDeck database.
+        - Created and attempted to restore a new database but got stuck during the data restore process.
+        - Tried working with SQL restore and fixture load but faced export issues.
+        - Created another new database, added new access keys in credentials, and loaded fixtures successfully.
+        - Worked on bulk upload and encountered an error in the URM column.
+        - Added the URM column to the bulk Excel file and successfully loaded it.
+        - Commented out the date format in `admin.py` file to resolve the date format error.
+        - Confirmed that bulk upload and export functionalities are working fine.
+
+    Lawson:
+        - Investigated web scraping data from Grainger.
