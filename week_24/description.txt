@@ -41,10 +41,9 @@
 
 20_june:
     - Lawson:
-        - working on scraping grainger 
-        - find out two domains of grainger canada and global
-        - made a script for both to scrape data 
-        - learn how to make a xpath in it 
-        - find out different UI on global due to search keywords
-        - fetch out the categories in global and unable to find sub categories
-        -  
+        - Worked on scraping data from Grainger.
+        - Discovered two Grainger domains: Canada and Global.
+        - Developed scripts for both domains to scrape data.
+        - Learned how to create XPath expressions.
+        - Noted different UIs on the Global site due to search keywords.
+        - Successfully fetched categories on the Global site but unable to find subcategories.
