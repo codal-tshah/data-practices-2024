@@ -38,3 +38,13 @@
 
     Lawson:
         - Investigated web scraping data from Grainger.
+
+20_june:
+    - Lawson:
+        - working on scraping grainger 
+        - find out two domains of grainger canada and global
+        - made a script for both to scrape data 
+        - learn how to make a xpath in it 
+        - find out different UI on global due to search keywords
+        - fetch out the categories in global and unable to find sub categories
+        -  
