@@ -59,24 +59,3 @@
         Fixed package.json using Yarn.
     - Lawson:
         Continued exploring Grainger with Scrapy. 
-
-24_june:
-    - Lawson:
-        - scrapping the data by Grainger
-        - 
-
-25_june:
-    - ClaimDeck:
-        - editing django export script
-        - edited all data fields
-        - edited dehydtrated in class
-
-26_june:
-    -Lawson 
-        - scrapy and scrapy selenium for grainger 
-        - unable to fetch href url
-
-27_june:
-    - ClaimDeck:
-        - django export done
-        
