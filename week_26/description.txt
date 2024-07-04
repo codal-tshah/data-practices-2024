@@ -1,0 +1,47 @@
+1_july:
+    - Lawson:
+        - Worked on the Selenium script.
+        - Properly set up ChromeDriver by adjusting the Chrome version and ChromeDriver path.
+        - Initially unable to scrape data using Selenium.
+        - Found a solution by enabling headless mode with GUI, allowing the script to run properly.
+        - Successfully fetched data and stored it in CSV for a few limited products.
+        - Created a new script to scrape data from another window but encountered an error.
+        - Developed a script to fetch a list of product details within a product details page.
+
+2_july:
+    - Lawson:
+        - working on analyze search criteria for grainger 
+        - found out 4 UI 
+        - do some handson search on grainger for checking how it behaves on different searches such as:
+            - by using MFR no. / brand / brand + item name , etc...
+            - found out best results on brand + item name 
+    
+    - Claimdeck:
+        - 2:15 to 4.30 dev verification
+        - 4.30 - 5 bug fixing on django export of Access status is not pushed properly on github as column name have to change it 
+        - 5 to 7.30 GitHub conflicts
+        - 7.30 to 8 dev verification
+3_july:   
+    - Claimdeck:
+        - writing up pytest on matterclaim
+        - working on dev verification and add some comments on tickets as bug found out 
+        - working on bugs that found out on Django export as: 
+            - claim status change date is not working as upto the mark 
+            - made correction on status change date 
+            - watching out time out while exporting more than 500+ contacts info (to make the code refactor)
+        - working on adding response on API call on event_schedule (modified in serializer)
+        - checking on github conflicts on dev and qa while making PR to merge it 
+        - done dev verification again on filter categories 
+
+4_july:
+    - Lawson:
+        - working on Selenium script to improve as make it work with headless as its not working
+        - unable to scrape data from another table
+        - improved code a bit to work proper on data for 1 table atleast
+
+    - Claimdeck:
+    - working on pytest 
+    - working on django export 2 feedbacks
+        - filtered out only person to show no company in contacts while export
+        - filtered out contact type as other and specified_contact_type only 
+    
