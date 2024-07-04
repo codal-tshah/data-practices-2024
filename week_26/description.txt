@@ -8,6 +8,7 @@
         - Created a new script to scrape data from another window but encountered an error.
         - Developed a script to fetch a list of product details within a product details page.
 
+
 2_july:
     - Lawson:
         - working on analyze search criteria for grainger 
