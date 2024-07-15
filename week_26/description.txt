@@ -18,10 +18,13 @@
             - found out best results on brand + item name 
     
     - Claimdeck:
-        - 2:15 to 4.30 dev verification
-        - 4.30 - 5 bug fixing on django export of Access status is not pushed properly on github as column name have to change it 
-        - 5 to 7.30 GitHub conflicts
-        - 7.30 to 8 dev verification
+        - dev verification
+        - bug fixing on django export of Access status is not pushed properly on github as column name have to change it 
+        - Encountered Github conflicts:
+            - unable to merge PR on dev 
+            - while dev to QA merge it always shows changes even its pushed 
+            - made diifferent trials on dev and qa by making PR from each to solve the github commit conflicts 
+        - dev verification
 3_july:   
     - Claimdeck:
         - writing up pytest on matterclaim
