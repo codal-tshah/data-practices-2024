@@ -11,3 +11,15 @@
             - adding new columns 
             - join operations
 
+21_may:
+    - Redshift:
+        - Learned about distribution keys and sort keys.
+        - Learned AWS CLI.
+        - Managed AWS IAM users and root users.
+        - Assigned roles and policies.
+        - Created access keys, secret keys, and S3 keys.
+        - Connected S3 and loaded data into Redshift using a Python script:
+            - Executed queries and printed results.
+            - Printed data using pandas DataFrame.
+        - Resolved sys_load_error_detail issue by printing error details.
+
