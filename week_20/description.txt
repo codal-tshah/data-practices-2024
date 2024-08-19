@@ -25,10 +25,10 @@
 
 22_may:
     - ClaimDeck:
-        - Writing Pytest for matter/ClaimValuationViewSet:
-            - Written 4 test cases:
-                - 2 passed and 2 failed.
-                - Encountered error: 'str' object has no attribute 'get'.
+    - Writing Pytest for matter/ClaiValuationViewSet:
+        - Written 4 test cases:
+            - 2 passed and 2 failed.
+            - Encountered error: 'str' object has no attribute 'get'.
 
     - Redshift:
         - Updated the script for better results.
