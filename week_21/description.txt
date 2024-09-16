@@ -15,3 +15,20 @@
         - Reviewed CD-339 PR:
             - Removed `globalsearch/factories.py`.
             - Updated imports in `matter/test_views.py`.
+
+28_may:
+    - ETL:
+        - Encountered an error loading CSV files using the GUI import tool.
+        - Created a new MySQL database in RDS (`database-1`):
+            - Connected MySQL to DBeaver.
+            - Created four tables.
+            - Faced issues loading data using `INFILE` command due to "Loading local data is disabled" error.
+        - Started cleaning data from CSV files using Pandas in a Colab notebook.
+
+    - ClaimDeck:
+        - Resolved the issue with `edit_notes` API Pytest.
+        - Wrote seven Pytest cases for `matter/ClaimValuationViewSet`.
+        - Encountered empty data issue in `test_claim_valuations_list`.
+        - Achieved 100% coverage in `views.py` for `ClaimValuationViewSet`.
+        - Made a commit, pushed the branch, and resolved code conflicts.
+        - Checked dependencies suggested by Dependabot in PRs for `requirements.txt`.
