@@ -101,4 +101,16 @@ select * from order_reviews;
 select * from orders;
 select * from products;
 
+drop table cleaned_order_reviews;
+CREATE TABLE IF NOT EXISTS cleaned_order_reviews (
+   review_id VARCHAR(32) NOT NULL,
+   order_id VARCHAR(32) NOT NULL,
+   review_score INTEGER NOT NULL,
+   review_creation_date DATE NULL DEFAULT NULL,
+   review_answer_timestamp TIME NULL DEFAULT NULL
+); 
+
+select * from cleaned_order_reviews;
+
+
 

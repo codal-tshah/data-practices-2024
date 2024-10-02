@@ -32,3 +32,19 @@
         - Achieved 100% coverage in `views.py` for `ClaimValuationViewSet`.
         - Made a commit, pushed the branch, and resolved code conflicts.
         - Checked dependencies suggested by Dependabot in PRs for `requirements.txt`.
+
+29_may:
+    - ETL:
+        - Performed a ETL on order_reviews
+            - removed null rows
+            - split the data from date and time 
+            - removed columns which are unnecessary
+            - changes dtypes 
+            - made a dump file data and store it in csv file again
+        - made a new table with different datatypes 
+        - loaded data in dbeaver using import data
+
+    - ClaimDeck:
+        - started working on verfication ticket:
+            - encoutered issue in event icon is not made 
+            
