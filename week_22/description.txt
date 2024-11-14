@@ -9,7 +9,7 @@
             - Began debugging the issue using event delays in Celery.
             - Utilized the Django debugger to find a solution.
 
-4th_june:
+4_june:
     - ETL:
         - Learning to Set Up the Connection Between RDS and Redshift:
             - Attempted using Estuary for the connection.
@@ -20,3 +20,12 @@
             - Debugged the `partial_update` for "mark as read" and `destroy` for "deleting the notification".
                 - Found that removing the delay from the `destroy` API resolved the issue, making it work perfectly.
                 - Created PRs for both development and production (CD-435-dev).
+
+5_june:
+    - Tableau:
+        - Explored the three main services in BI: Desktop, Service, and Report Builder.
+        - Began learning Tableau:
+            - Worked on sample data from superstore.xls.
+            - Created various sheets for the dashboard in Tableau.
+            - Studied Tableau documentation.
+            - Developed a dashboard from the created sheets.
