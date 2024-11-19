@@ -29,3 +29,19 @@
             - Created various sheets for the dashboard in Tableau.
             - Studied Tableau documentation.
             - Developed a dashboard from the created sheets.
+
+6_june:
+    - Data Practices:
+        - Tableau:
+            - Created a dashboard for superstore data.
+            - Edited workbooks.
+            - Learned how to connect data from S3 and Redshift.
+            - Plotted graphs by connecting data to Redshift.
+
+        - Matplotlib:
+            - Created a small notebook for Airbnb analysis using data from Kaggle.
+            - Gained insights using Seaborn.
+
+    - ClaimDeck:
+        - Tested profile pic enhancement for spacing on names, which worked perfectly fine.
+        - Attached screenshots to the red dot ticket and profile pic enhancement. 

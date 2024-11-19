@@ -191,8 +191,8 @@ CREATE TABLE my_schema.customers_dist (
 )
 SORTKEY (first_name);
 
-
-
+select * from my_schema.sales_sort;
+select * from my_schema.customers_dist;
 
 copy my_schema.customers_dist
 from 's3://becketfortrial/demo_data/customers.csv'
@@ -223,8 +223,11 @@ IGNOREHEADER 1;
 
 
 select * from my_schema.products_dist;
-
-
+select * from my_schema.products;
+select * from my_schema.sales_sort;
+select * from my_schema.customers_dist;
+select * from my_schema.sales_dict;
+select * from my_schema.customers;
 
 
 ---------------------------   trial ---------------------------
