@@ -19,3 +19,12 @@ Making a flow (pandas):
             - connection of redshift to Tableau
             - set up data model 
             - make insights
+
+connecting the rds to dbeaver(locally) for PostgreSQL
+- make inboud rules from vpcid setting
+- make access public
+- create a databse in dbeaver select PostgreSQL
+- connect using endpoint of rds database and test connection
+
+
+tables created , 
