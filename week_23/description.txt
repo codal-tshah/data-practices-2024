@@ -10,3 +10,7 @@
         - Created tables for all files.
         - Encountered a copy job error while loading CSV files to Redshift.
         - Set up an RDS PostgreSQL database and table to connect to Lambda for the demo.
+
+11_june:
+    - Making of PPT for DATA Prcatices 
+    - checking lambda trigger and resolving errors of demo project 
