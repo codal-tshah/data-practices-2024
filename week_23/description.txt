@@ -12,5 +12,11 @@
         - Set up an RDS PostgreSQL database and table to connect to Lambda for the demo.
 
 11_june:
-    - Making of PPT for DATA Prcatices 
-    - checking lambda trigger and resolving errors of demo project 
+    - Created a PowerPoint presentation for Data Practices.
+    - Checked the Lambda trigger and resolved errors in the demo project.
+
+12_june:
+    - Resolved the issue of moving CSV files to another folder by increasing the Lambda timeout from 3 to 5 minutes.
+    - Created tables and loaded CSV files into them.
+    - Researched methods for loading multiple files into a table simultaneously.
+    - Completed and presented the PowerPoint presentation.
