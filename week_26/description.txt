@@ -46,3 +46,10 @@
         - filtered out only person to show no company in contacts while export
         - filtered out contact type as other and specified_contact_type only 
     
+5_july:
+    - Lawson:
+        - working on selenium script
+        - fetching one tale only
+        - made a script for another UI for grainger
+        - started working on scrolling script 
+        - encountered issues in scrolling script too
