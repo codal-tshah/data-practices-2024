@@ -64,3 +64,9 @@
     - Lawson:
         - scrapping the data by Grainger
         - 
+
+25_june:
+    - ClaimDeck:
+        - editing django export script
+        - edited all data fields
+        - edited dehydtrated in class
