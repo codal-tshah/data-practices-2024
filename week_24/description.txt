@@ -70,3 +70,13 @@
         - editing django export script
         - edited all data fields
         - edited dehydtrated in class
+
+26_june:
+    -Lawson 
+        - scrapy and scrapy selenium for grainger 
+        - unable to fetch href url
+
+27_june:
+    - ClaimDeck:
+        - django export done
+        
