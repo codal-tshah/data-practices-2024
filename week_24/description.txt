@@ -50,4 +50,17 @@
 
 21_june:
     - ClaimDeck:
-        - working on django export 
+        Continued work on the Django export flow.
+        Created different contacts to fetch details.
+        Added a list of fields for display.
+        Encountered and addressed incorrect field details in the PDF.
+        Faced an issue with the front-end after the latest pull.
+        Resolved the node version issue.
+        Fixed package.json using Yarn.
+    - Lawson:
+        Continued exploring Grainger with Scrapy. 
+
+24_june:
+    - Lawson:
+        - scrapping the data by Grainger
+        - 
