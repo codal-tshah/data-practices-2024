@@ -20,3 +20,8 @@
     - Created tables and loaded CSV files into them.
     - Researched methods for loading multiple files into a table simultaneously.
     - Completed and presented the PowerPoint presentation.
+
+13_june:
+    - Claimdeck:
+        - worked on story's(CD-304) DEV verification(CD-465)
+        - worked on issue CD-468 regarding the red dot issue and found out the reason of issue is comign from FE
