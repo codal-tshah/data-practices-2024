@@ -47,3 +47,7 @@
         - Learned how to create XPath expressions.
         - Noted different UIs on the Global site due to search keywords.
         - Successfully fetched categories on the Global site but unable to find subcategories.
+
+21_june:
+    - ClaimDeck:
+        - working on django export 
